@@ -34,7 +34,6 @@
 
 (defn sign-up!
       [customers customer ui-state]
-      (js/console.log (prn-str customer))
       (when (apply v/validate! customer ui-state customer-validators)
             (swap! customers (fn [xs] (conj xs @customer)))))
 

@@ -1,7 +1,15 @@
 (ns examples.hello-world
   (:require [reforms.reagent :include-macros true :as f]
             [reagent.core :refer [atom render-component]]
-            [examples.shared.utils :refer [inspector-view]]))
+            [examples.shared.utils :refer [inspector-view]]
+            #_[clojure.browser.repl :as repl]))
+
+;(enable-console-print!)
+;
+;(defonce conn
+;         (do
+;           (println "Connecting!")
+;           (repl/connect "http://localhost:9000/repl")))
 
 (defn simple-view
   [data]
@@ -14,7 +22,7 @@
           ;[inspector-view horizontal-orientation]
           (f/form
             {:on-submit #(js/alert "Submitted")}
-            (f/text "Your name" "Type your name here" data [:name])
+            (f/text "Your name" data [:name] :placeholder "Type your name here")
             (f/form-buttons
               (f/button-primary "Submit" #(js/alert (:name @data)))
               (f/button-default "Cancel" #(js/alert "Cancel!")))

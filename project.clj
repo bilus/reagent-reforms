@@ -1,11 +1,11 @@
-(defproject reagent-reforms "0.3.0"                     ;; Keep in sync with reforms.
+(defproject reagent-reforms "0.4.0-SNAPSHOT"                     ;; Keep in sync with reforms.
             :description "Reforms bindings for Reagent."
             :url "http://bilus.github.io/reforms/"
             :license {:name "Eclipse Public License"
                       :url  "http://www.eclipse.org/legal/epl-v10.html"}
             :dependencies [[org.clojure/clojure "1.7.0-RC1"]
                            [org.clojure/clojurescript "0.0-3308"]
-                           [reforms "0.3.0"]
+                           [reforms "0.4.0-SNAPSHOT"]
                            [reagent "0.5.0"]]
             :jar-exclusions [#"\.cljx|\.swp|\.swo|\.DS_Store"]
             :auto-clean false
@@ -24,7 +24,7 @@
             :aliases {"cljsbuild" ["with-profile" "dev" "cljsbuild"]}
 
             :cljsbuild {:builds {:hello-world
-                                 {:source-paths ["examples/shared/" "examples/hello_world/src" "src" #_"../reforms/src"]
+                                 {:source-paths ["examples/shared/" "examples/hello_world/src" "src" "../reforms/src"]
                                   :compiler     {:output-to     "examples/hello_world/out/main.js"
                                                  :output-dir    "examples/hello_world/out"
                                                  :source-map    true

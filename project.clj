@@ -3,14 +3,14 @@
             :url "http://bilus.github.io/reforms/"
             :license {:name "Eclipse Public License"
                       :url  "http://www.eclipse.org/legal/epl-v10.html"}
-            :dependencies [[org.clojure/clojure "1.7.0-RC1"]
-                           [org.clojure/clojurescript "0.0-3308"]
-                           [reforms "0.4.0-SNAPSHOT"]
+            :dependencies [[org.clojure/clojure "1.7.0"]
+                           [org.clojure/clojurescript "1.7.122"]
+                           ;; [reforms "0.4.0-SNAPSHOT"]
                            [reagent "0.5.0"]]
             :jar-exclusions [#"\.cljx|\.swp|\.swo|\.DS_Store"]
             :auto-clean false
 
-            :plugins [[lein-cljsbuild "1.0.6"]]
+            :plugins [[lein-cljsbuild "1.1.0"]]
 
             :clean-targets ["examples/hello_world/out"
                             "examples/controls/out"
@@ -30,7 +30,7 @@
                                                  :source-map    true
                                                  :optimizations :none}}
                                  :controls
-                                 {:source-paths ["examples/shared/" "examples/controls/src" "src" #_"../reforms/src"]
+                                 {:source-paths ["examples/shared/" "examples/controls/src" "src" "../reforms/src"]
                                   :compiler     {:output-to     "examples/controls/out/main.js"
                                                  :output-dir    "examples/controls/out"
                                                  :source-map    true

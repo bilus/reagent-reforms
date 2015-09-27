@@ -13,6 +13,11 @@
   (swap! x (fn [x]
              (assoc-in x ks v))))
 
+(defn- do-swap!
+  [x ks f]
+  (swap! x (fn [x]
+             (update-in x ks f))))
+
 (extend-type RCursor
   IBinding
   (-valid? [_]
@@ -24,6 +29,11 @@
      (reset! this v))
     ([this ks v]
      (do-reset! this ks v)))
+  (-swap!
+    ([this f]
+     (swap! this f))
+    ([this ks f]
+     (do-swap! this ks f)))
   (-get-in [this ks]
     (get-in @this ks))
   (-path [this]
@@ -40,6 +50,11 @@
      (reset! this v))
     ([this ks v]
      (do-reset! this ks v)))
+  (-swap!
+    ([this f]
+     (swap! this f))
+    ([this ks f]
+     (do-swap! this ks f)))
   (-get-in [this ks]
     (get-in @this ks))
   (-path [_]

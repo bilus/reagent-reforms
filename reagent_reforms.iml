@@ -31,7 +31,7 @@
     <orderEntry type="library" name="Leiningen: org.clojure/core.async:0.1.346.0-17112a-alpha" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.nrepl:0.2.6" level="project" />
     <orderEntry type="library" name="Leiningen: reagent:0.5.0" level="project" />
-    <orderEntry type="library" name="Leiningen: reforms:0.4.0-20150727.172023-4" level="project" />
+    <orderEntry type="library" name="Leiningen: reforms:0.4.0-20150728.073446-6" level="project" />
     <orderEntry type="library" name="Leiningen: com.google.javascript/closure-compiler:v20150505" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/data.json:0.2.6" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/google-closure-library:0.0-20150505-021ed5b3" level="project" />

@@ -1,9 +1,11 @@
 (ns examples.controls
   (:require [reforms.reagent :as f :include-macros true]
+            [reforms.table :as t]
             [reagent.core :refer [atom render-component]]
             [examples.shared.utils :refer [inspector-view]]))
 
-(def app-state (atom {:color "#c26b66"}))
+(def app-state (atom {:color "#c26b66"
+                      :selected nil}))
 
 (defn simple-view
   [data]
@@ -16,7 +18,12 @@
        [:div "Contents 1"]
        [:div "Contents 2"]
        [:div "Contents 3"])
-     (f/form
+     (t/table [{:name "Tom" :id 12} {:name "Jerry" :id 23}]
+                   :columns {:name "Hero name"}
+                   :checkboxes {:cursor data
+                                :korks [:selected]
+                                :value :id})
+     #_(f/form
        {:on-submit #(js/alert "Submitted")}
        (f/text "Text" data [:text] :placeholder "A placeholder")
        (f/password "Password" data [:password] :placeholder "A placeholder")

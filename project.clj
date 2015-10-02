@@ -1,11 +1,11 @@
-(defproject reagent-reforms "0.4.0-SNAPSHOT"                     ;; Keep in sync with reforms.
+(defproject reagent-reforms "0.4.0"                     ;; Keep in sync with reforms.
             :description "Reforms bindings for Reagent."
             :url "http://bilus.github.io/reforms/"
             :license {:name "Eclipse Public License"
                       :url  "http://www.eclipse.org/legal/epl-v10.html"}
             :dependencies [[org.clojure/clojure "1.7.0"]
                            [org.clojure/clojurescript "1.7.122"]
-                           ;; [reforms "0.4.0-SNAPSHOT"]
+                           [reforms "0.4.0"]
                            [reagent "0.5.0"]]
             :jar-exclusions [#"\.cljx|\.swp|\.swo|\.DS_Store"]
             :auto-clean false
@@ -24,13 +24,13 @@
             :aliases {"cljsbuild" ["with-profile" "dev" "cljsbuild"]}
 
             :cljsbuild {:builds {:hello-world
-                                 {:source-paths ["examples/shared/" "examples/hello_world/src" "src" "../reforms/src"]
+                                 {:source-paths ["examples/shared/" "examples/hello_world/src" "src" #_"../reforms/src"]
                                   :compiler     {:output-to     "examples/hello_world/out/main.js"
                                                  :output-dir    "examples/hello_world/out"
                                                  :source-map    true
                                                  :optimizations :none}}
                                  :controls
-                                 {:source-paths ["examples/shared/" "examples/controls/src" "src" "../reforms/src"]
+                                 {:source-paths ["examples/shared/" "examples/controls/src" "src" #_"../reforms/src"]
                                   :compiler     {:output-to     "examples/controls/out/main.js"
                                                  :output-dir    "examples/controls/out"
                                                  :source-map    true

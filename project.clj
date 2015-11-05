@@ -1,4 +1,4 @@
-(defproject reagent-reforms "0.4.1"                     ;; Keep in sync with reforms.
+(defproject reagent-reforms "0.4.2"                     ;; Keep in sync with reforms.
             :description "Reforms bindings for Reagent."
             :url "http://bilus.github.io/reforms/"
             :license {:name "Eclipse Public License"
@@ -6,9 +6,7 @@
             :dependencies [[org.clojure/clojure "1.7.0"]
                            [org.clojure/clojurescript "1.7.122"]
                            [reforms "0.4.1"]
-                           [reagent "0.5.0"]
-                           [re-com "0.7.0-alpha1"]
-                           [re-frame "0.5.0-alpha1"]]
+                           [reagent "0.5.0"]]
             :jar-exclusions [#"\.cljx|\.swp|\.swo|\.DS_Store"]
             :auto-clean false
 

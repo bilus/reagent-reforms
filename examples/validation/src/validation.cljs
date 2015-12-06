@@ -93,4 +93,3 @@
 (render-component
   [main-view]
   (. js/document (getElementById "app")))
-
